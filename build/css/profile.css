@@ -1,0 +1,59 @@
+/*  Clases  */
+.Pspacetop{
+	height: 5em;
+	width: auto;
+
+
+}
+.P_Titletext h1{
+	color: #005c99;
+}
+
+.Secondtext{
+color: #008ae6;
+}
+.Socialmedia1 h5{
+	font-size: 1em;
+	color: #3385ff;
+	display: inline;
+}
+.Socialmedia1 img{
+	height: 2em;
+	width: 2em;
+}
+.Socialmedia2 h5{
+	font-size: 1em;
+	display: inline;
+}
+.Socialmedia2 img{
+	height: 2em;
+	width: 2em;
+}
+.bgdescripcion2{
+	background-color: #1a8cff;
+	height: auto;
+}
+.bgdescripcion3{
+	background-color: #8c8c8c;
+	height: auto;
+}
+.imagen-galeria{
+	height: 200px;
+	width: 300px;
+	background-color: #a64dff;
+}
+/*  IDs  */
+#profilepic{
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	overflow:hidden;
+
+}
+
+/*  Implicitos  */
+body{
+    background-image: url("../images/profile/utilities/bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}

@@ -1,0 +1,29 @@
+/*  Clases  */
+.grupo{
+background-color: red;
+color: red;
+}
+.coso{
+  background-color: red;
+  height: 100px;
+  width: 100px;
+}
+
+
+/*  IDs  */
+#logo{
+  height: 2em;
+  width: 2em;
+}
+
+/*  Implicitos  */
+body{
+    background-image: url("../images/signupbg.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: auto;
+}
+
+main {
+  color: red;
+}

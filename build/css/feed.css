@@ -1,0 +1,143 @@
+.cuadro1 {
+
+  background-color: white;
+}
+.profile {
+  background-color: #aa00ff;
+  opacity: 0.8;
+  height: auto;
+}
+.cuadro3 {
+
+  background-color: #5ab9ea;
+}
+.cuadro4 {
+
+  background-color: #5ab9ea;
+}
+
+.imagenaqui{
+  margin-bottom: 1.5em;
+}
+
+
+.world-latest-articles{
+  margin-top: 2em;
+  padding-left: 24px;
+}
+
+.posttext{
+  color: white;
+}
+.morelinks{
+  list-style-type: none;
+  display: inline;
+}
+.pensador{
+  width: 100%;
+  padding: .9em;
+  height: auto;
+  background-color: #5ab9ea;
+}
+.pensador textarea::placeholder{
+  color: #e6e6e6;
+  opacity: .7;
+}
+
+.icon {
+  margin: 0em 3.7em;
+}
+
+.modal-header{
+  background-color: #8000ff;
+  color: #ffffff;
+}
+/* Another divison THIS IS FOR IDs */
+#logo {
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  left: 1px;
+  padding: 0px;
+  margin: 0px;
+
+}
+
+#content{
+
+}#content .info{
+  color: red;
+}
+
+
+/* Afecciones COSAS ENTRO DE OTRAS NESTING!!!!*/
+body{
+    background-image: url("../images/bg.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+main{
+  align-items: center;
+padding-top: 35px;
+text-align: justify;
+}
+
+aside {
+  font-weight: 600;
+  height: 100%;
+  color: white;
+  padding: 15px;
+  padding-top: 25px;
+  margin-top: 20px;
+  margin-bottom: 2em;
+text-align: center;
+margin-left: .5em;
+}
+footer {
+  padding: .8em;
+}
+header a{
+  height: 60px;
+}
+
+aside img{
+  width: 9em;
+  height: 9em;n
+}
+aside a{
+  text-decoration: none;
+  color: white;
+}
+aside .three_top{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+aside .three_top li{
+  display: inline;
+  padding: 0px 5px 5px 2px;
+}
+aside p{
+  text-align: justify;
+  padding: 0px 18px;
+}
+
+/*  post THIS IS POSTS CSS  */
+
+.post{
+  padding: 15px;
+}
+
+.single-blog-post{
+  padding: 1em;
+  background-color: #e6ffff;
+  opacity: 0.8;
+  margin-bottom: 2em;
+}
+.single-blog-post a{
+  text-decoration: none;
+  color: #476b6b;
+}
+.post-thumbnail{
+margin-right: 1em;
+}
