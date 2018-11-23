@@ -87,7 +87,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="build/css/bootstrap.min.css">
-<link rel="stylesheet" href="build/css/register2.css" type="text/css">
+<link rel="stylesheet" href="build/css/register3.css" type="text/css">
 <title>Registro</title>
 </head>
 <body>
@@ -109,17 +109,59 @@
   <div class="container">
       <div class="row">
           <div class="col-12 col-xl-7">
-            <div class="module bg-white border-info p-3 text-center">
-              <h1>Create an account</h1>
+            <div class="module px-4 m-3 bg-white border border-primary rounded">
+              <div class="row">
+                <div class="iconcancel mt-3 ml-1   justify-content-left">
+                  <a href="#"><img src="build/images/register/exiticon.svg"></a>
+                </div>
+              </div>
+              <div class="row mb-3 justify-content-center">
+                <div class="col-12 text-center">
+                  <h1>Create an account</h1>
+                </div>
+              </div>
               <form class="form" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off">
                 <div class="alert alert-error"><?= $_SESSION['message'] ?></div>
-                <input class="d-block" type="text" placeholder="User Name" name="username" required />
-                <input class="d-block" type="email" placeholder="Email" name="email" required />
-                <input class="d-block" type="password" placeholder="Password" name="password" autocomplete="new-password" required />
-                <input class="d-block" type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
-                <input class="d-block" type="text" placeholder="Full Name" name="fullname" required />
-                <div class="avatar"><label>Select your avatar: </label><input type="file" name="avatar" accept="image/*" required /></div>
-                <input type="submit" value="Register" name="register" class="btn btn-primary" />
+                <div class="form-group row ">
+                  <label for="username1" class="col-sm-3 col-form-label rounded"> Usuario: </label>
+                  <div class="col-12 col-md-4">
+                    <input class="form-control" id="username1" type="text" placeholder="User Name" name="username" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="email1" class="col-sm-3 col-form-label rounded"> Email: </label>
+                  <div class="col-12 col-md-4">
+                      <input class="form-control" id="email1" type="email" placeholder="Email" name="email" required />
+                  </div>
+
+                </div>
+                <div class="form-group row">
+                  <label for="pass1" class="col-sm-3 bg-success col-form-label rounded">Contraseña: </label>
+                  <div class="col-12 col-md-4">
+                    <input class="form-control" id="pass1" type="password" placeholder="Password" name="password" autocomplete="new-password" required />
+                  </div>
+
+                </div>
+                <div class="form-group row">
+                    <label for="pass2" class="col-sm-3 col-form-label rounded bg-white"></label>
+                  <div class="col-12 col-md-4">
+                    <input class="form-control" id="pass2" type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
+                  </div>
+
+                </div>
+                <div class="form-group row">
+                  <label for="full1" class="col-sm-3 bg-info col-form-label rounded"> Usuario: </label>
+                  <div class="col-12 col-md-4">
+                    <input class="form-control" id="full1" type="text" placeholder="Full Name" name="fullname" required />
+                  </div>
+
+                </div>
+                <div class="form-group row text-center">
+                  <div class="avatar"><label class="col-sm-4 text-black bg-white col-form-label rounded">Select your avatar: </label><input type="file" name="avatar" accept="image/*" required /></div>
+                </div>
+                <div class="form-group row justify-content-center">
+                  <button type="submit" class="btn btn-primary"> Registrarse </button>
+                </div>
               </form>
             </div>
           </div>
