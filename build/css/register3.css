@@ -1,0 +1,267 @@
+/*  CLASES -----------------------------------------------------------------------------------------------  */
+.iconforexit img{
+  height: 58px;
+  width: 58px;
+}
+.iconcancel img{
+  height: 42px;
+  width: 42px;
+}
+.space{
+  height: 60px;
+}
+.module{
+  height: autopx;
+  width:auto;
+}
+.module h1{
+  color: #3d0066;
+}
+.text-black{
+  color: Black;
+}
+
+/* IDS ----------------------------------------------------------------------------------------------- */
+
+/* IMPLICITOS ----------------------------------------------------------------------------------------------- */
+/*Botones brillantes :D */
+body{
+  background-image: url("../images/register/bg.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: Roboto;
+}
+label{
+  color: #FFF;
+  background-color: #b800e6;
+  margin-right: 100px;
+  margin-left: 40px;
+  font-family:Roboto, sans-serif;
+  font-weight: bold;
+}
+
+
+/* OTHERS -------------------------------------------------------------------------------------------------------- */
+/* PAra el alert */
+.alert {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px 20px 4px 20px;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  text-shadow: none;
+  position: relative;
+  background-color: #272e3b;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #000;
+  box-shadow: 0 0 0 1px #363d49 inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+}
+.alert-error {
+  color: #f00;
+  background-color: #360e10;
+  box-shadow: 0 0 0 1px #551e21 inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+}
+.alert:empty{
+    display: none;
+}
+.alert-success {
+  color: #21ec0c;
+  background-color: #15360e;
+  box-shadow: 0 0 0 1px #2a551e inset, 0 5px 10px rgba(0, 0, 0, 0.75);
+}
+/* todo esto es pal puto boton */
+
+.btn {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 3px 0;
+  padding: 6px 20px;
+  font-size: 15px;
+  line-height: 20px;
+  height: 34px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #00aeff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  -webkit-transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.btn.active,
+.btn:active {
+  padding: 7px 19px 5px 21px;
+}
+.btn.disabled:active,
+.btn[disabled]:active,
+.btn.disabled.active,
+.btn[disabled].active {
+  padding: 6px 20px !important;
+}
+.btn:hover,
+.btn:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+}
+.btn:active,
+.btn.active {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+}
+.btn-primary {
+  background-color: #098cc8;
+  color: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  -webkit-transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+  background-image: -webkit-linear-gradient(top, #0f9ada, #0076ad);
+  background-image: linear-gradient(to bottom, #0f9ada, #0076ad);
+  border: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #21b0f1;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #006899;
+  color: rgba(255, 255, 255, 0.7);
+  border-color: transparent;
+  box-shadow: inset 1.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-image: -webkit-linear-gradient(top, #37c0ff, #0097dd);
+  background-image: linear-gradient(to bottom, #37c0ff, #0097dd);
+}
+.btn-primary:active,
+.btn-primary.active {
+  background-image: -webkit-linear-gradient(top, #006ea1, #00608d);
+  background-image: linear-gradient(to bottom, #006ea1, #00608d);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) inset, 0 0 0 1px rgba(255, 255, 255, 0.07) inset;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+/*hasta aca */
+/*ROBOTO FONT */
+/* BEGIN Thin */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Thin/Roboto-Thin.woff2?v=2.137") format("woff2"), url("./fonts/Thin/Roboto-Thin.woff?v=2.137") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+/* END Thin */
+/* BEGIN Thin Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/ThinItalic/Roboto-ThinItalic.woff2?v=2.137") format("woff2"), url("./fonts/ThinItalic/Roboto-ThinItalic.woff?v=2.137") format("woff");
+  font-weight: 100;
+  font-style: italic; }
+/* END Thin Italic */
+/* BEGIN Light */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Light/Roboto-Light.woff2?v=2.137") format("woff2"), url("./fonts/Light/Roboto-Light.woff?v=2.137") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+/* END Light */
+/* BEGIN Light Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/LightItalic/Roboto-LightItalic.woff2?v=2.137") format("woff2"), url("./fonts/LightItalic/Roboto-LightItalic.woff?v=2.137") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+/* END Light Italic */
+/* BEGIN Regular */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Regular/Roboto-Regular.woff2?v=2.137") format("woff2"), url("./fonts/Regular/Roboto-Regular.woff?v=2.137") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Regular/Roboto-Regular.woff2?v=2.137") format("woff2"), url("./fonts/Regular/Roboto-Regular.woff?v=2.137") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/* END Regular */
+/* BEGIN Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Italic/Roboto-Italic.woff2?v=2.137") format("woff2"), url("./fonts/Italic/Roboto-Italic.woff?v=2.137") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Italic/Roboto-Italic.woff2?v=2.137") format("woff2"), url("./fonts/Italic/Roboto-Italic.woff?v=2.137") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+/* END Italic */
+/* BEGIN Medium */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Medium/Roboto-Medium.woff2?v=2.137") format("woff2"), url("./fonts/Medium/Roboto-Medium.woff?v=2.137") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+/* END Medium */
+/* BEGIN Medium Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/MediumItalic/Roboto-MediumItalic.woff2?v=2.137") format("woff2"), url("./fonts/MediumItalic/Roboto-MediumItalic.woff?v=2.137") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+/* END Medium Italic */
+/* BEGIN Bold */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Bold/Roboto-Bold.woff2?v=2.137") format("woff2"), url("./fonts/Bold/Roboto-Bold.woff?v=2.137") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Bold/Roboto-Bold.woff2?v=2.137") format("woff2"), url("./fonts/Bold/Roboto-Bold.woff?v=2.137") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+/* END Bold */
+/* BEGIN Bold Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/BoldItalic/Roboto-BoldItalic.woff2?v=2.137") format("woff2"), url("./fonts/BoldItalic/Roboto-BoldItalic.woff?v=2.137") format("woff");
+  font-weight: 700;
+  font-style: italic; }
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/BoldItalic/Roboto-BoldItalic.woff2?v=2.137") format("woff2"), url("./fonts/BoldItalic/Roboto-BoldItalic.woff?v=2.137") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+/* END Bold Italic */
+/* BEGIN Black */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Black/Roboto-Black.woff2?v=2.137") format("woff2"), url("./fonts/Black/Roboto-Black.woff?v=2.137") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+/* END Black */
+/* BEGIN Black Italic */
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/BlackItalic/Roboto-BlackItalic.woff2?v=2.137") format("woff2"), url("./fonts/BlackItalic/Roboto-BlackItalic.woff?v=2.137") format("woff");
+  font-weight: 900;
+  font-style: italic; }
+/* END Black Italic */
+
+/*# sourceMappingURL=roboto.css.map */
