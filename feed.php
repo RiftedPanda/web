@@ -9,6 +9,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <link rel="stylesheet" href="build/css/bootstrap.min.css">
  <link rel="stylesheet" href="build/css/feed.css">
+ <link rel="stylesheet" href="build/css/searchstyle2.css">
  <title>Welcome, here's your feed</title>
  </head>
 <body>
@@ -52,7 +53,7 @@
             <p>Aqui va a la info lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
       </aside>
-    <main class="col-12 col-xl-8">
+    <main class="col-12 col-xl-8 mb-3">
         <div class="pensador rounded">
             <form  method="post">
                 <div>
@@ -191,23 +192,33 @@
 <!-- FOOTER ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <footer>
   <div class="container-fluid">
-    <div class="row my-4">
-      <div class="col-12 p-2 fixed-bottom display-inline">
-        <div class="icons m-y-3" align="right">
+    <div class="row fixed-bottom justify-content-center mb-4">
+        <div class="coso">
           <!-- Just an image -->
-          <a  href="#">
-            <img src="build/images/feed/icon1.png" width="45" height="45" alt="">
-          </a>
+            <div class="mx-1 d-inline">
+              <form action="search.php"  method="POST">
+              <div class="search-box">
+                <input id="search-txt" class="search-txt" type="text" name="search" placeholder="Type to search">
+                <button type="submit" name="submit-search" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                </div>
+              </form>
+            </div>
           <!-- Just an image -->
-          <a  href="#">
-            <img  src="build/images/feed/icon1.png" width="45" height="45" alt="">
-          </a>
+            <div class="mx-1 d-inline">
+              <a  href="#">
+                <img  src="build/images/feed/icon1.png" width="45" height="45" alt="">
+              </a>
+            </div>
           <!-- Just an image -->
-          <a  href="#">
-            <img  src="build/images/feed/icon1.png" width="45" height="45" alt="">
-          </a>
+            <div class="mx-1 d-inline">
+              <a  href="#">
+                <img  src="build/images/feed/icon1.png" width="45" height="45" alt="">
+              </a>
+            </div>
+
         </div>
-      </div>
     </div>
   </div>
 </footer>
@@ -221,5 +232,6 @@ de la base de datos, datos del usuario. -->
  <script type="text/javascript" src="build/js/popper.min.js"></script>
  <script type="text/javascript" src="build/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="build/js/scripts.js"></script>
+ <script type="text/javascript" src="build/js/search.js"></script>
  </body>
  </html>
