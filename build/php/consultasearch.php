@@ -5,11 +5,9 @@
 
 	if ($queryResults > 0) {
 		while ($row = mysqli_fetch_assoc($result)) {
-			$nick = $row['u_nickname'];
-			$img = $row['u_image'];
-			$text = $row['u_text'];
-			$name = $row['u_name'];
-			$datetime = $row['u_date'];
+			$nickname = $row['nickname'];
+			$foto = $row['foto'];
+			$fullname = $row['fullname'];
 		}
 	 } else {
 		# code...
