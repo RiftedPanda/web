@@ -18,7 +18,7 @@
 		<div class="alert alert-success">
 			<?= $_SESSION['message']?>
 		</div>
-		<span class="user"><img src='<?= $_SESSION['avatar']?>'></span><br />
+		<span class="user"><img src='<?= $_SESSION['foto']?>'></span><br />
 		Welcome <span class="user"><?= $_SESSION['username']?><br />
 		<span class="user"><?= $_SESSION['fullname']?><br />
 
@@ -27,9 +27,9 @@
   			$server = "localhost";
   			$username = "root";
   			$password = "";
-  			$dbname = "accounts";
+  			$dbname = "web";
   			$connection = new mysqli($server, $username, $password, $dbname);
-  			$sql = 'SELECT username, fullname, avatar FROM users';
+  			$sql = 'SELECT username, fullname, foto FROM users';
   			$result = $connection->query($sql);//$result = mysqli_result_object
 		?>
 
@@ -39,7 +39,7 @@
 				while ($row = $result->fetch_assoc()) {
 				 	echo "<div class='userlist'><span>$row[username]</span><br />";
 				 	echo "<span>$row[fullname]</span><br />";
-				 	echo "<img src='$row[avatar]'></div>";
+				 	echo "<img src='$row[foto]'></div>";
 				}
 			?>
 		</div>
