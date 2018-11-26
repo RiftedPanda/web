@@ -9,7 +9,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <link rel="stylesheet" href="build/css/bootstrap.min.css">
  <link rel="stylesheet" href="build/css/feed.css">
- <link rel="stylesheet" href="build/css/searchstyle2.css">
+ <link rel="stylesheet" href="build/css/searchstyle.css">
  <title>Welcome, here's your feed</title>
  </head>
 <body>
@@ -32,7 +32,7 @@
           <div>
             <a href="#"><img class="imagenaqui"  src="build/images/profile.png" alt=""></a>
             <h3>¡Bienvendid@!</h3>
-            <h1>Nombre</h1>
+              <a href="profile.php"><h1>Nombre</h1></a>
             <ul class="three_top">
                 <li><a href="#">Red social 1</a></li>
                 <span>|</span>
@@ -194,11 +194,11 @@
   <div class="container-fluid">
     <div class="row fixed-bottom justify-content-center mb-4">
         <div class="coso">
-          <!-- SearchBar -->
+          <!-- Just an image -->
             <div class="mx-1 d-inline">
               <form action="search.php"  method="POST">
               <div class="search-box">
-                <input id="search-txt" class="search-txt" type="text" name="search" placeholder="Buscar Artista">
+                <input id="search-txt" class="search-txt" type="text" name="search" placeholder="Type to search">
                 <button type="submit" name="submit-search" class="search-btn">
                     <i class="fas fa-search"></i>
                 </button>
@@ -207,13 +207,13 @@
             </div>
           <!-- Just an image -->
             <div class="mx-1 d-inline">
-              <a  href="#">
+              <a  href="account/profile.php">
                 <img  src="build/images/feed/icon1.png" width="45" height="45" alt="">
               </a>
             </div>
           <!-- Just an image -->
             <div class="mx-1 d-inline">
-              <a  href="#">
+              <a  href="account/logout.php">
                 <img  src="build/images/feed/icon1.png" width="45" height="45" alt="">
               </a>
             </div>
