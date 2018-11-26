@@ -4,11 +4,11 @@
   $server = "localhost";
   $username = "root";
   $password = "";
-  $dbname = "web";
+  $dbname = "accounts";
    $tbl_name = "users";
   $connection = new mysqli($server, $username, $password, $dbname);
   if ($connection->connect_error) {
-      die("La conexion ha fallado: " . $connection->connect_error);
+      die("The connection has failed: " . $connection->connect_error);
   }
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //two passwords are equal to each other
@@ -18,16 +18,16 @@
       $email = $connection->real_escape_string($_POST['email']);
       $password = md5($_POST['password']);//md5 hash password
       $fullname = $connection->real_escape_string($_POST['fullname']);
-      $foto_path = $connection->real_escape_string('build/images/users/images_users/'.$_FILES['foto']['name']);
+      $avatar_path = $connection->real_escape_string('build/images/users/images_users/'.$_FILES['avatar']['name']);
 
       //make sure file type is image
 
-      if (preg_match("!image!",$_FILES['foto']['type'])) {
+      if (preg_match("!image!",$_FILES['avatar']['type'])) {
         //copy image to img/folder
-        if (copy($_FILES['foto']['tmp_name'], $foto_path)) {
+        if (copy($_FILES['avatar']['tmp_name'], $avatar_path)) {
           $_SESSION['username'] = $username;
           $_SESSION['fullname'] = $fullname;
-          $_SESSION['foto'] = $foto_path;
+          $_SESSION['avatar'] = $avatar_path;
 
           $searchUser = "SELECT * FROM $tbl_name
           WHERE username = '$_POST[username]'";
@@ -37,7 +37,7 @@
           $count = mysqli_num_rows($result);
 
           if ($count == 1) {
-            $_SESSION['message'] = "Este nombre de usuario ya existe, porfavor elige otro!";
+            $_SESSION['message'] = "This username has already been taken, Please choose another one!";
           }
           else
           {
@@ -45,33 +45,33 @@
             $result = $connection->query($searchEmail);
             $count = mysqli_num_rows($result);
             if ($count == 1) {
-              $_SESSION['message'] = "Este correo ya esta en uso, porfavor utiliza otro!";
+              $_SESSION['message'] = "This email is already in use, Please use another one!";
             }
             else
             {
-              $sql = "INSERT INTO users (username, email, password,fullname, foto)"."VALUES('$username','$email','$password','$fullname','$foto_path')";
+              $sql = "INSERT INTO users (username, email, password,fullname, avatar)"."VALUES('$username','$email','$password','$fullname','$avatar_path')";
 
               //if the query is succesful, redirect to welcome.php page, done!
               if ($connection->query($sql) === true) {
-                $_SESSION['message'] = "Registro completo! Se añadio $username a la base de datos!";
-                header("location: profile.php");
+                $_SESSION['message'] = "Registration succesful! Added $username to the database!";
+                header("location: welcome.php");
               }
               else{
-                $_SESSION['message'] = "Usuario no pudo ser añadido!";
+                $_SESSION['message'] = "User could not be added to the database!";
               }
             }
           }
         }
         else{
-          $_SESSION['message'] = "Archivo no se pudo subir!";
+          $_SESSION['message'] = "File upload failed!";
         }
       }
       else{
-        $_SESSION['message'] = "Porfavor solo usa imagenes GIF, JPG or PNG !";
+        $_SESSION['message'] = "Please only upload GIF, JPG or PNG images!";
       }
     }
     else{
-      $_SESSION['message'] = "Contraseñas no coinciden!";
+      $_SESSION['message'] = "Two passwords do not match!";
     }
   }
 
@@ -117,7 +117,7 @@
               </div>
               <div class="row mb-3 justify-content-center">
                 <div class="col-12 text-center">
-                  <h1>Crea una cuenta</h1>
+                  <h1>Create an account</h1>
                 </div>
               </div>
               <form class="form" action="register.php" method="post" enctype="multipart/form-data" autocomplete="off">
@@ -125,7 +125,7 @@
                 <div class="form-group row ">
                   <label for="username1" class="col-sm-3 col-form-label rounded"> Usuario: </label>
                   <div class="col-12 col-md-4">
-                    <input class="form-control" id="username1" type="text" placeholder="Nombre Usuario" name="username" required>
+                    <input class="form-control" id="username1" type="text" placeholder="User Name" name="username" required>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -138,26 +138,26 @@
                 <div class="form-group row">
                   <label for="pass1" class="col-sm-3 bg-success col-form-label rounded">Contraseña: </label>
                   <div class="col-12 col-md-4">
-                    <input class="form-control" id="pass1" type="password" placeholder="Contraseña" name="password" autocomplete="new-password" required />
+                    <input class="form-control" id="pass1" type="password" placeholder="Password" name="password" autocomplete="new-password" required />
                   </div>
 
                 </div>
                 <div class="form-group row">
                     <label for="pass2" class="col-sm-3 col-form-label rounded bg-white"></label>
                   <div class="col-12 col-md-4">
-                    <input class="form-control" id="pass2" type="password" placeholder="Confirmar" name="confirmpassword" autocomplete="new-password" required />
+                    <input class="form-control" id="pass2" type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
                   </div>
 
                 </div>
                 <div class="form-group row">
                   <label for="full1" class="col-sm-3 bg-info col-form-label rounded"> Usuario: </label>
                   <div class="col-12 col-md-4">
-                    <input class="form-control" id="full1" type="text" placeholder="Nombre Completo" name="fullname" required />
+                    <input class="form-control" id="full1" type="text" placeholder="Full Name" name="fullname" required />
                   </div>
 
                 </div>
                 <div class="form-group row text-center">
-                  <div class="avatar"><label class="col-sm-4 text-black bg-white col-form-label rounded">Selecciona tu avatar: </label><input type="file" name="foto" accept="image/*" required /></div>
+                  <div class="avatar"><label class="col-sm-4 text-black bg-white col-form-label rounded">Select your avatar: </label><input type="file" name="avatar" accept="image/*" required /></div>
                 </div>
                 <div class="form-group row justify-content-center">
                   <button type="submit" class="btn btn-primary"> Registrarse </button>
