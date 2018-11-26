@@ -109,6 +109,10 @@ aside a{
   text-decoration: none;
   color: white;
 }
+aside a:hover{
+  text-decoration: none;
+  color: white;
+}
 aside .three_top{
   list-style-type: none;
   padding: 0px;
