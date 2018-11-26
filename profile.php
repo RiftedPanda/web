@@ -1,5 +1,6 @@
 <?php
-
+  include 'build/php/connectionsearch.php';
+  include 'build/php/consultasearch.php';
  ?>
 
  <!doctype html>
@@ -9,7 +10,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <link rel="stylesheet" href="build/css/bootstrap.min.css">
  <link rel="stylesheet" href="build/css/profile.css">
- <title>"nameupdatable"</title>
+ <title>Perfil</title>
  </head>
 <body>
    <!--  INICIA EL CONTENIDO ****************************************************************************** -->
@@ -27,18 +28,41 @@
     <!--Area de la imagen de perfil y Descripción -->
 <div class="container">
 
+      <?php
+      $title = mysqli_real_escape_string($conn, $_GET['title']);
+      $name = mysqli_real_escape_string($conn, $_GET['name']);
+      $sql = "SELECT * FROM users WHERE nickname='$title' AND fullname='$name'";
+      $result = mysqli_query($conn, $sql);
+      $queryResults = mysqli_num_rows($result);
+
+      if ($queryResults > 0) 
+      {
+        while ($row = mysqli_fetch_assoc($result))
+        {
+          $nickname = $row['nickname'];
+          $foto = $row['foto'];
+          $fullname = $row['fullname'];
+        }
+      } 
+      else
+      {
+        # code...
+      }
+    ?>
   <div class="row">
     <!-- Titulo y descripción abajo -->
     <div class="col-12 col-xl-9">
       <div class="Pspacetop">
 
       </div>
+
       <div class="P_Titletext text-center">
-        <h1>Texto para el título del perfil</h1>
+        <h1><?php echo $nickname; ?></h1>
       </div>
       <div class="row justify-content-center">
         <div class="Secondtext text-justify col-12 col-xl-10 mb-3 mb-xl-0">
-          <h4>Descripción de la persona Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+          <h4>Nombre: <?php echo $fullname; ?>
+              Descripción de la persona Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
           </h4>
         </div>
       </div>
@@ -60,7 +84,7 @@
     </div>
     <!-- Imagen de perfil abajo -->
     <div class="col-12 col-xl-3">
-      <img id="profilepic" class="mx-auto mt-5 d-block" src="build/images/profile/profile/dog.jpg" alt="">
+      <img id="profilepic" class="mx-auto mt-5 d-block" src="<?php echo $foto; ?>" alt="">
 
     </div>
 
@@ -70,7 +94,7 @@
 <!-- DEscripcion de galeria////////////////////////////////////////////////////////////////////////////////////////////// -->
     <div class="container-fluid">
       <div class="bgdescripcion2 mt-4 text-white py-3">
-          <h1 class="text-center" >Galería de "Fulanito de tal"</h1>
+          <h1 class="text-center" >Galería de "<?php echo $nickname; ?>"</h1>
           <h4 class="text-center">Esta es otra parte de la descripción</h4>
       </div>
       <div class="bgdescripcion3 text-white py-3">

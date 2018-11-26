@@ -10,7 +10,7 @@
 	<div class="user-container">
 		<?php
 			$title = mysqli_real_escape_string($conn, $_GET['title']);
-			$date = mysqli_real_escape_string($conn, $_GET['name']);
+			$name = mysqli_real_escape_string($conn, $_GET['name']);
 			$sql = "SELECT * FROM users WHERE nickname='$title' AND fullname='$name'";
 			$result = mysqli_query($conn, $sql);
 			$queryResults = mysqli_num_rows($result);

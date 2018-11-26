@@ -17,7 +17,7 @@
 		 	echo "There are ".$queryResult." results!";
 		 	if ($queryResult > 0) {
 		 		while ($row = mysqli_fetch_assoc($result)) {
-		 			echo "<a href='user.php?title=".$row['nickname']."&name=".$row['fullname']."'>";
+		 			echo "<a href='profile.php?title=".$row['nickname']."&name=".$row['fullname']."'>";
 					$nickname = $row['nickname'];
 					$foto = $row['foto'];
 					$fullname = $row['fullname'];
