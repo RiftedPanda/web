@@ -1,13 +1,14 @@
 <?php
-  session_start();
-  /*$usuario = $_SESSION['usuario'];
-  echo session_id();
-  echo "<br><br><br><br><br>";
-  var_dump($_SESSION);
-  echo "<br><br><br><br><br>";*/
-  include 'build/php/connectionsearch.php';
- ?>
 
+  session_start();
+
+  if(isset($_SESSION['usuario'])){
+    include 'config.php';
+  }
+  else{
+    header("Location: index.php"); 
+  }
+?>
  <!doctype html>
  <html>
  <head>
@@ -48,6 +49,22 @@
           <h4>Description: <?= $_SESSION['description']?></h4>
         </div>
       </div>
+        <div class="col-12 col-xl-3">
+      <?php
+
+        include 'config.php';
+        $usuario = $_SESSION['usuario'];
+        $sql = "SELECT * FROM users WHERE (username = '$usuario') ";
+        $resultado = mysqli_query($conexion, $sql) or die("Error en consulta");
+
+        while ($columna = mysqli_fetch_array($resultado))
+        {
+          echo "<img  src='web-master/".$columna['foto']." '></div>";
+
+        }
+      ?>
+
+    </div>
       <!-- redes sociales primarias -->
       <div class="Socialmedia1 row justify-content-center">
         <div class="social1 m-3 d-inline justify-self-center">
@@ -65,10 +82,7 @@
       </div>
     </div>
     <!-- Imagen de perfil abajo -->
-    <div class="col-12 col-xl-3">
-      <img id="profilepic" class="mx-auto mt-5 d-block" src="<?php $_SESSION['foto'] ?>" alt="">
-
-    </div>
+    
 
   </div>
   <!-- Termina descricion e imagen de perfil -->

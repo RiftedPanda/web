@@ -1,10 +1,15 @@
 <?php
+
   session_start();
-    /*echo session_id();
-  echo "<br><br><br><br><br>";
-  var_dump($_SESSION);*/
-  include 'build/php/connectionsearch.php';
- ?>
+
+  if(isset($_SESSION['usuario'])){
+    echo "";
+  }
+  else{
+    header("Location: index.php"); 
+  }
+?>
+
 
  <!doctype html>
  <html>
