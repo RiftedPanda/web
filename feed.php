@@ -1,5 +1,9 @@
 <?php
-
+  session_start();
+    /*echo session_id();
+  echo "<br><br><br><br><br>";
+  var_dump($_SESSION);*/
+  include 'build/php/connectionsearch.php';
  ?>
 
  <!doctype html>
@@ -32,25 +36,26 @@
           <div>
             <a href="#"><img class="imagenaqui"  src="build/images/profile.png" alt=""></a>
             <h3>¡Bienvendid@!</h3>
-              <a href="profile.php"><h1>Nombre</h1></a>
+              <a href="profile.php"><h1><?= $_SESSION['fullname']?></h1></a>
             <ul class="three_top">
-                <li><a href="#">Red social 1</a></li>
+                <li><a href="#"><?= $_SESSION['facebook']?></a></li>
                 <span>|</span>
-                <li><a href="#">Red social 2</a></li>
+                <li><a href="#"><?= $_SESSION['twitter']?></a></li>
                 <span>|</span>
-                <li><a href="#">Red social 3</a></li>
+                <li><a href="#"><?= $_SESSION['instagram']?></a></li>
             </ul>
 
             <ul class="morelinks">
-              <li><a href="#">A bigger social media place</a></li>
-              <li><a href="#">A bigger social media place</a></li>
+              <li><a href="#"><?= $_SESSION['deviantart']?></a></li>
+              <li><a href="#"><?= $_SESSION['tumblr']?></a></li>
+              <li><a href="#"><?= $_SESSION['patreon']?></a></li>
             </ul>
 
 
           </div>
 
           <div class="info">
-            <p>Aqui va a la info lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><?= $_SESSION['description']?></p>
           </div>
       </aside>
     <main class="col-12 col-xl-8 mb-3">

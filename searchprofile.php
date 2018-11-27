@@ -1,11 +1,6 @@
 <?php
-  session_start();
-  /*$usuario = $_SESSION['usuario'];
-  echo session_id();
-  echo "<br><br><br><br><br>";
-  var_dump($_SESSION);
-  echo "<br><br><br><br><br>";*/
   include 'build/php/connectionsearch.php';
+  include 'build/php/consultasearch.php';
  ?>
 
  <!doctype html>
@@ -32,6 +27,38 @@
   <main>
     <!--Area de la imagen de perfil y Descripción -->
 <div class="container">
+
+      <?php
+      $title = mysqli_real_escape_string($conn, $_GET['title']);
+      $name = mysqli_real_escape_string($conn, $_GET['name']);
+      $sql = "SELECT * FROM users WHERE nickname='$title' AND fullname='$name'";
+      $result = mysqli_query($conn, $sql);
+      $queryResults = mysqli_num_rows($result);
+
+      if ($queryResults > 0)
+      {
+        while ($row = mysqli_fetch_assoc($result))
+        {
+          $nickname = $row['nickname'];
+          $fullname = $row['fullname'];
+          $foto = $row['foto'];
+          $description = $row['description'];
+          $facebook = $row['facebook'];
+          $twitter = $row['twitter'];
+          $instagram = $row['instagram'];
+          $deviantart = $row['deviantart'];
+          $tumblr = $row['tumblr'];
+          $twitch = $row['twitch'];
+          $patreon = $row['patreon'];
+          $kofi = $row['kofi'];
+          $paypal = $row['paypal'];
+        }
+      }
+      else
+      {
+        # code...
+      }
+    ?>
   <div class="row">
     <!-- Titulo y descripción abajo -->
     <div class="col-12 col-xl-9">
@@ -40,33 +67,33 @@
       </div>
 
       <div class="P_Titletext text-center">
-        <h1><?= $_SESSION['usuario']?></h1>
+        <h1><?php echo $nickname; ?></h1>
       </div>
       <div class="row justify-content-center">
         <div class="Secondtext text-justify col-12 col-xl-10 mb-3 mb-xl-0">
-          <h4>Nombre: <?= $_SESSION['fullname']?></h4>
-          <h4>Description: <?= $_SESSION['description']?></h4>
+          <h4>Nombre: <?php echo $fullname; ?></h4>
+          <h4>Description: <?php echo $description; ?></h4>
         </div>
       </div>
       <!-- redes sociales primarias -->
       <div class="Socialmedia1 row justify-content-center">
         <div class="social1 m-3 d-inline justify-self-center">
             <img class="d-inline" src="build/images/profile/socialmedia/facebook-logo-button.svg">
-              <h5 class="ml-2"><?= $_SESSION['facebook']?></h5>
+              <h5 class="ml-2">Facebook: <?php echo $facebook; ?></h5>
         </div>
         <div class="social2 m-3 d-inline">
             <img class="d-inline" src="build/images/profile/socialmedia/facebook-logo-button.svg">
-              <h5 class="ml-2">Twitter: <?= $_SESSION['twitter']?></h5>
+              <h5 class="ml-2">Twitter: <?php echo $twitter; ?></h5>
         </div>
         <div class="social3 m-3 d-inline">
             <img class="d-inline" src="build/images/profile/socialmedia/facebook-logo-button.svg">
-              <h5 class="ml-2">Instagram: <?= $_SESSION['instagram']?></h5>
+              <h5 class="ml-2">Instagram: <?php echo $instagram; ?></h5>
         </div>
       </div>
     </div>
     <!-- Imagen de perfil abajo -->
     <div class="col-12 col-xl-3">
-      <img id="profilepic" class="mx-auto mt-5 d-block" src="<?php $_SESSION['foto'] ?>" alt="">
+      <img id="profilepic" class="mx-auto mt-5 d-block" src="<?php echo $foto; ?>" alt="">
 
     </div>
 
@@ -76,22 +103,22 @@
 <!-- DEscripcion de galeria////////////////////////////////////////////////////////////////////////////////////////////// -->
     <div class="container-fluid">
       <div class="bgdescripcion2 mt-4 text-white py-3">
-          <h1 class="text-center" >Galería de "<?= $_SESSION['usuario']?>"</h1>
+          <h1 class="text-center" >Galería de "<?php echo $nickname; ?>"</h1>
           <h4 class="text-center">Esta es otra parte de la descripción</h4>
       </div>
       <div class="bgdescripcion3 text-white py-3">
         <div class="Socialmedia2 row justify-content-center">
           <div class="social4 m-3 d-inline justify-self-center">
               <img class="d-inline" src="build/images/profile/socialmedia/facebook-logo-button.svg">
-                <h5 class="ml-2">Deviantart: <?= $_SESSION['deviantart']?></h5>
+                <h5 class="ml-2">Deviantart: <?php echo $deviantart; ?></h5>
           </div>
           <div class="social5 m-3 d-inline">
               <img class="d-inline" src="build/images/profile/socialmedia/facebook-logo-button.svg">
-                <h5 class="ml-2">Tumblr: <?= $_SESSION['tumblr']?></h5>
+                <h5 class="ml-2">Tumblr: <?php echo $tumblr; ?></h5>
           </div>
           <div class="social6 m-3 d-inline">
               <img class="d-inline" src="build/images/profile/socialmedia/facebook-logo-button.svg">
-                <h5 class="ml-2">Patreon: <?= $_SESSION['patreon']?></h5>
+                <h5 class="ml-2">Patreon: <?php echo $patreon; ?></h5>
           </div>
         </div>
       </div>

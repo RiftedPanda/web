@@ -10,8 +10,8 @@
         <!-- User Menu-->
         <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-lg"></i></a>
           <ul class="dropdown-menu settings-menu">
-            <li><a href="/profile.php"><i class="fa fa-user fa-lg"></i> Ver Perfil</a></li>
-            <li><a href="/account/logout.php"><i class="fa fa-sign-out fa-lg"></i> Cerrar Sesión</a></li>
+            <li><a href="../profile.php"><i class="fa fa-user fa-lg"></i> Ver Perfil</a></li>
+            <li><a href="logout.php"><i class="fa fa-sign-out fa-lg"></i> Cerrar Sesión</a></li>
           </ul>
         </li>
       </ul>
@@ -28,7 +28,7 @@
 
         include 'config.php';
         $usuario = $_SESSION['usuario'];
-        $sql = "SELECT * FROM user WHERE (username = '$usuario') ";
+        $sql = "SELECT * FROM users WHERE (username = '$usuario') ";
         $resultado = mysqli_query($conexion, $sql) or die("Error en consulta");
 
         while ($columna = mysqli_fetch_array($resultado))
