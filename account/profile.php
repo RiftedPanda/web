@@ -69,7 +69,7 @@
                 }
 
                 $usuario = $_SESSION['usuario'];
-                $sql = "SELECT * FROM user WHERE (username = '$usuario') ";
+                $sql = "SELECT * FROM users WHERE (username = '$usuario') ";
                 $resultado = mysqli_query($conexion, $sql) or die("Error en consulta");   
                 
 
@@ -112,6 +112,8 @@
                           echo "<label>Apodo</label>";
                           echo "<input class='form-control' value='".$columna['nickname']."' type='text' name='nickname'>";
                         echo "</div>";
+                    
+
 
                         echo "<div class='clearfix'></div>";
                         echo "<div class='col-md-12 mb-20'>";
@@ -128,11 +130,45 @@
 
                         echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Facebook</label>";
-                          echo "<input class='form-control' value='".$columna['Facebook']."' type='number' name='Facebook'>";
+                          echo "<input class='form-control' value='".$columna['facebook']."' type='text' name='Facebook'>";
                         echo "</div>";
                         echo "<div class='clearfix'></div>";
+                        
+                        echo "<div class='col-md-12 mb-20'>";
+                          echo "<label>Twitter</label>";
+                          echo "<input class='form-control' value='".$columna['twitter']."' type='text' name='twitter'>";
+                        echo "</div>";
+                            
+                            echo "<div class='clearfix'></div>";
+                          echo "<div class='col-md-12 mb-20'>";
+                          echo "<label>instagram</label>";
+                          echo "<input class='form-control' value='".$columna['instagram']."' type='text' name='instagram'>";
+                        echo "</div>";      
                     
-
+                        echo "<div class='clearfix'></div>";
+                            echo "<div class='col-md-12 mb-20'>";
+                          echo "<label>Deviantart</label>";
+                          echo "<input class='form-control' value='".$columna['deviantart']."' type='text' name='deviantart'>";
+                        echo "</div>"; 
+                                
+                            echo "<div class='clearfix'></div>";
+                            echo "<div class='col-md-12 mb-20'>";
+                          echo "<label>Tumblr</label>";
+                          echo "<input class='form-control' value='".$columna['tumblr']."' type='text' name='tumblr'>";
+                        echo "</div>"; 
+                            
+                            echo "<div class='clearfix'></div>";
+                            echo "<div class='col-md-12 mb-20'>";
+                          echo "<label>Patreon</label>";
+                          echo "<input class='form-control' value='".$columna['patreon']."' type='text' name='patreon'>";
+                        echo "</div>"; 
+                        
+                            echo "<div class='clearfix'></div>";
+                            echo "<div class='col-md-12 mb-20'>";
+                          echo "<label>Descripción</label>";
+                          echo "<input class='form-control' value='".$columna['description']."' type='text' name='description'>";
+                        echo "</div>"; 
+                    
                         echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Fecha Nacimiento</label>";
                           echo "<div class='input-group'>";
