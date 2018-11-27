@@ -75,7 +75,7 @@
                       }
 
                         $id_usuario=$_SESSION["usuario"];
-                        $sql = "SELECT * FROM user WHERE (username = '$usuario') ";
+                        $sql = "SELECT * FROM users WHERE (username = '$usuario') ";
                         $resultado = mysqli_query($conexion, $sql) or die("Error en consulta");   
                         while ($columna = mysqli_fetch_array($resultado)) 
                 {
@@ -84,7 +84,7 @@
                       echo "<form action='checkgaleria.php' method='post' enctype='multipart/form-data'>";
                         echo "<input name='username' value='$id_usuario' hidden>";
                       /*  echo "<input name='codigo_galeria' value='$codigoGaleria' hidden>"; */
-                        echo "<input name='id_usuario' value='".$columna['id']."' hidden > ";
+                        echo "<input name='id_usuario' value='".$columna['id']."'  > ";
 
                         
                         $categorias = "SELECT * FROM categories";

@@ -19,16 +19,15 @@
 
 		$imagen1=$_FILES["imagen1"]["name"];
 	    $ruta1=$_FILES["imagen1"]["tmp_name"];
-	    $destino1="../build/images/users/galeria/".$imagen1;
+	    $destino1="../build/images/Users/galeria/".$imagen1;
 	    echo $imagen1;
 	    copy($ruta1,$destino1);
     	$sql_imagen1 = "INSERT INTO gallery (id_user,Id, uniqueurl) VALUES ('$id_usuario','$id_categoria','$destino1')";
-        echo $idcat;
     	$resultado1 = mysqli_query($conexion, $sql_imagen1) or die("Error en consulta1");
 
 	    $imagen2=$_FILES["imagen2"]["name"];
 	    $ruta2=$_FILES["imagen2"]["tmp_name"];
-	    $destino2="../build/images/users/galeria/".$imagen2;
+	    $destino2="../build/images/Users/galeria/".$imagen2;
 	    echo $imagen2;
 	    copy($ruta2,$destino2);
     	$sql_imagen2 = "INSERT INTO gallery (id_user,Id, uniqueurl) VALUES ('$id_usuario','$id_categoria', '$destino2')";
@@ -36,7 +35,7 @@
 
 	    $imagen3=$_FILES["imagen3"]["name"];
 	    $ruta3=$_FILES["imagen3"]["tmp_name"];
-	    $destino3="../build/images/users/galeria/".$imagen3;
+	    $destino3="../build/images/Users/galeria/".$imagen3;
 	    echo $imagen3;
 	    copy($ruta3,$destino3);
     	$sql_imagen3 = "INSERT INTO gallery (id_user,Id, uniqueurl) VALUES ('$id_usuario','$id_categoria', '$destino3')";
@@ -44,7 +43,7 @@
 
 	    $imagen4=$_FILES["imagen4"]["name"];
 	    $ruta4=$_FILES["imagen4"]["tmp_name"];
-	    $destino4="../build/images/users/galeria/".$imagen4;
+	    $destino4="../build/images/Users/galeria/".$imagen4;
 	    echo $imagen4;
 	    copy($ruta4,$destino4);
     	$sql_imagen4 = "INSERT INTO gallery (id_user,Id, uniqueurl) VALUES ('$id_usuario','$id_categoria', '$destino4')";
