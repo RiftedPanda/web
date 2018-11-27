@@ -5,7 +5,7 @@
   if(isset($_SESSION['usuario'])){
     include '../config.php';
     $usuario = $_SESSION['usuario'];
-    $sql = "SELECT usertype FROM user WHERE (username = '$usuario') ";
+    $sql = "SELECT usertype FROM users WHERE (username = '$usuario') ";
     $resultado = mysqli_query($conexion, $sql) or die("Error en consulta"); 
     $administrador = mysqli_fetch_array($resultado);
     $administrador['usertype'];

@@ -19,7 +19,7 @@
 		
 		
 		#Se guarda los cambios del usuario
-		$sql_editar = "UPDATE user SET  activo = '$activo' WHERE id = '$id_usuario'  ";
+		$sql_editar = "UPDATE users SET  activo = '$activo' WHERE id = '$id_usuario'  ";
 		$resultado = mysqli_query($conexion, $sql_editar) or die("Error en consulta");
 		header("Location: lista-usuarios.php");
 	}
