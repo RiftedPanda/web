@@ -20,23 +20,24 @@
 		 			echo "<a href='searchprofile.php?title=".$row['nickname']."&name=".$row['fullname']."'>";
 					$nickname = $row['nickname'];
 					$username = $row['username'];
-					$foto = $row['foto'];
+					//$foto = $row['foto'];
 					$fullname = $row['fullname'];
 		 		}
 		 	} else{
 		 		echo "There are no results matching your search!";
 		 			$nickname = "";
 		 			$username = "";
-		 			$foto =  "";
+		 			//$foto =  "";
 		 			$fullname = "";
 		 	}
 		 }
+		 /*<img width="30%" height="30%" src='<?php echo $foto;?>'>*/
 
 	?>
 		<div class='user-box'>
 			<h3><?php echo $nickname; ?></h3>
 			<h3><?php echo $username; ?></h3>
-			<img width="30%" height="30%" src='<?php echo $foto; ?>'>
+			
 			<p><?php echo $fullname; ?></p>
 		</div></a>
 </div>
