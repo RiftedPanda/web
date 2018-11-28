@@ -8,8 +8,6 @@
 		$usuario = $_POST['Usuario'];
 		$email = $_POST['Email'];
 		$password = $_POST['Pass'];
-        $categoria = 1;
-        $id = 21;
 		$sql = "SELECT * FROM users WHERE username = '$usuario' OR email = '$email' ";
 		$resultado = mysqli_query($conexion, $sql) or die("Error en consulta");
 		$row = mysqli_num_rows($resultado);
@@ -21,7 +19,7 @@
 		else{
 			$_SESSION["Usuario"] = $usuario;
 			$sql_registrar = "INSERT INTO users (username, email, password) VALUES ('$usuario', '$email', '$password')";
-			$resultado_registro = mysqli_query($conexion, $sql_registrar) or die("Valio verga");
+			$resultado_registro = mysqli_query($conexion, $sql_registrar) or die(header("Location: page-error.html"));
 			header("Location: ../index.php");
 		}
 	}

@@ -14,7 +14,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $twitter = $_POST['twitter'];
-        $instagram = $_POST['instragram'];
+        $instagram = $_POST['instagram'];
         $deviantart = $_POST['deviantart'];
         $tumblr = $_POST['tumblr'];
         $patreon = $_POST['patreon'];
@@ -24,7 +24,7 @@
 		$foto=$_FILES["foto"]["name"];
 	    $ruta=$_FILES["foto"]["tmp_name"];
 	    $destino="../build/images/Users/Images_users/".$foto;
-			
+
 	    #Valido si el email ya existe
 	    $sql_email = "SELECT * FROM users WHERE email = '$email' AND id != '$id_usuario' ";
 		$resultado_email = mysqli_query($conexion, $sql_email) or die("Error en consulta");
@@ -45,7 +45,7 @@
 		    	$sql_editar_foto = "UPDATE users SET foto = '$destino' WHERE id = '$id_usuario'  ";
 		    	$resultado_foto = mysqli_query($conexion, $sql_editar_foto) or die("Error en consulta 1");
 		    }
-		    
+
 			$_SESSION["mensaje_alerta"] = "<div class='alert alert-dismissible alert-success'>  <button class='close' type='button' data-dismiss='alert'>×</button>Los cambios se han guardado correctamente </div>";
 			header("Location: profile.php");
 		}

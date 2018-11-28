@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  
+
   if(isset($_SESSION['usuario'])){
     echo "<script> window.location='profile.php'; </script>";
   }
@@ -14,8 +14,8 @@
 	<title>Registro</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="../login/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+<link rel="shortcut icon" type="image/png" href="favicon1.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -24,13 +24,13 @@
 	<link rel="stylesheet" type="text/css" href="../login/fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../login/vendor/animate/animate.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../login/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../login/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../login/vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../login/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../login/css/util.css">
@@ -48,10 +48,13 @@
   </script>
 </head>
 <body>
-	
+
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('../build/images/login/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+        <div class="image">
+          <a href="index.php"> <img src="../build/images/login/login_logo.png" width="400px" alt=""> </a>
+        </div>
 				<form class="login100-form validate-form" action="checksignup.php" method="post">
 					<span class="login100-form-title p-b-49">
 						Registro
@@ -77,15 +80,15 @@
 						<span class="focus-input100" data-symbol="&#xf200;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Contraseña es requerida"> 
+					<div class="wrap-input100 validate-input" data-validate="Contraseña es requerida">
 						<span class="label-input100">Contraseña</span>
 						<input class="input100" type="password" name="Pass" placeholder="Ingrese su Contraseña">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
-					
+
 					<div class="text-right p-t-8 p-b-31">
 						<a href="#">
-						
+
 						</a>
 					</div>
 
@@ -101,7 +104,7 @@
 
 					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
-							o registrate usando
+							O registrate usando:
 						</span>
 					</div>
 
@@ -114,7 +117,7 @@
 							<i class="fa fa-twitter"></i>
 						</a>
 
-						<button class="g-signin login100-social-item bg3 " 
+						<button class="g-signin login100-social-item bg3 "
 							data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email"
 							data-requestvisibleactions="http://schemas.google.com/AddActivity"
 							data-clientId="1022621130028-punpkh9voicguoelqup86tcmec2d78o8.apps.googleusercontent.com"
@@ -128,45 +131,45 @@
 
 					<div class="flex-col-c p-t-155">
 						<span class="txt1 p-b-17">
-							Ya tienes cuenta?
+							¿Ya tienes cuenta?
 						</span>
 
 						<a href="../index.php" class="txt2">
-							Ingresa aquí!
+							¡Ingresa aquí!
 						</a>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
-	
+
 
 	<div id="dropDownSelect1"></div>
-	
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 	var gpclass = (function(){
-	
+
 	//Defining Class Variables here
 	var response = undefined;
 	return {
 		//Class functions / Objects
-		
+
 		mycoddeSignIn:function(response){
 			// The user is signed in
 			if (response['access_token']) {
-			
+
 				//Get User Info from Google Plus API
 				gapi.client.load('plus','v1',this.getUserInformation);
-				
+
 			} else if (response['error']) {
 				// There was an error, which means the user is not signed in.
 				//alert('There was an error: ' + authResult['error']);
 			}
 		},
-		
+
 		getUserInformation: function(){
 			var request = gapi.client.plus.people.get( {'userId' : 'me'} );
 			request.execute( function(profile) {
@@ -179,10 +182,10 @@
 			});
 		}
 
-	
+
 	}; //End of Return
 	})();
-	
+
 	function mycoddeSignIn(gpSignInResponse){
 		gpclass.mycoddeSignIn(gpSignInResponse);
 	}

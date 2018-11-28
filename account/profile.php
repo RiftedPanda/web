@@ -6,7 +6,7 @@
     echo "";
   }
   else{
-    header("Location: ../index.php"); 
+    header("Location: ../index.php");
   }
 ?>
 <!DOCTYPE html>
@@ -15,10 +15,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS-->
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main2.css">
     <link rel="stylesheet" type="text/css" href="../fonts/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/fileinput.min.css" />
-    <script src="../js/jquery-3.2.1.min.js"></script>    
+    <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/fileinput.min.js"></script>
 
     <title></title>
@@ -26,7 +26,7 @@
   <body class="sidebar-mini fixed">
     <div class="wrapper">
       <meta charset="utf-8">
-      <?php include'../base.php' ?> 
+      <?php include'../base.php' ?>
 
       <div class="content-wrapper">
         <div class="row user">
@@ -57,31 +57,31 @@
           <div class="col-md-12">
             <div class="card ">
               <div id="kv-avatar-errors-1" style="width:100%;display:none"></div>
-              <?php 
+              <?php
                 include '../config.php';
 
                 if(isset($_SESSION["alerta"])){
 
                   if ($_SESSION["alerta"]) {
-                    echo $_SESSION["mensaje_alerta"];                    
+                    echo $_SESSION["mensaje_alerta"];
                   }
                   $_SESSION["alerta"] = False;
                 }
 
                 $usuario = $_SESSION['usuario'];
                 $sql = "SELECT * FROM users WHERE (username = '$usuario') ";
-                $resultado = mysqli_query($conexion, $sql) or die("Error en consulta");   
-                
+                $resultado = mysqli_query($conexion, $sql) or die("Error en consulta");
 
-                while ($columna = mysqli_fetch_array($resultado)) 
+
+                while ($columna = mysqli_fetch_array($resultado))
                 {
                     echo "<form class='form form-vertical' action='../account/editar_perfil.php' method='POST' enctype='multipart/form-data'>";
                     echo "<input name='id_usuario' value='".$columna['id']."' hidden> ";
-                    
+
                   echo "<h4 class='line-head'>Perfil ".$columna['username']."</h4>";
 
                   echo "<form class='form form-vertical' action='../account/editar_perfil.php' method='POST' enctype='multipart/form-data'>";
-                    
+
 
 
                     echo "<div class='row'>";
@@ -94,7 +94,7 @@
                         echo "</div>";
                         echo "<div class='kv-avatar-hint'><small>Seleccione imagen < 1500 KB</small></div>";
                       echo "</div>";
-                    
+
                     echo "<div class='col-md-8'>";
                         echo "<div class='col-md-12  mb-20'>";
                           echo "<label>Password</label>";
@@ -106,13 +106,13 @@
                           echo "<label>Nombre</label>";
                           echo "<input class='form-control' value='".$columna['fullname']."' type='text' name='fullname'>";
                         echo "</div>";
-                    
+
 
                         echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Apodo</label>";
                           echo "<input class='form-control' value='".$columna['nickname']."' type='text' name='nickname'>";
                         echo "</div>";
-                    
+
 
 
                         echo "<div class='clearfix'></div>";
@@ -120,55 +120,55 @@
                           echo "<label>Email</label>";
                           echo "<input class='form-control' value='".$columna['email']."' type='email' name='email'>";
                         echo "</div>";
-                  
-                         
+
+
                         echo "<input type='text' id='rutaFoto' value='".$columna['foto']."' hidden>";
-                     
+
 
                         echo "<div class='clearfix'></div>";
-                        
+
 
                         echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Facebook</label>";
                           echo "<input class='form-control' value='".$columna['facebook']."' type='text' name='Facebook'>";
                         echo "</div>";
                         echo "<div class='clearfix'></div>";
-                        
+
                         echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Twitter</label>";
                           echo "<input class='form-control' value='".$columna['twitter']."' type='text' name='twitter'>";
                         echo "</div>";
-                            
+
                             echo "<div class='clearfix'></div>";
                           echo "<div class='col-md-12 mb-20'>";
                           echo "<label>instagram</label>";
                           echo "<input class='form-control' value='".$columna['instagram']."' type='text' name='instagram'>";
-                        echo "</div>";      
-                    
+                        echo "</div>";
+
                         echo "<div class='clearfix'></div>";
                             echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Deviantart</label>";
                           echo "<input class='form-control' value='".$columna['deviantart']."' type='text' name='deviantart'>";
-                        echo "</div>"; 
-                                
+                        echo "</div>";
+
                             echo "<div class='clearfix'></div>";
                             echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Tumblr</label>";
                           echo "<input class='form-control' value='".$columna['tumblr']."' type='text' name='tumblr'>";
-                        echo "</div>"; 
-                            
+                        echo "</div>";
+
                             echo "<div class='clearfix'></div>";
                             echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Patreon</label>";
                           echo "<input class='form-control' value='".$columna['patreon']."' type='text' name='patreon'>";
-                        echo "</div>"; 
-                        
+                        echo "</div>";
+
                             echo "<div class='clearfix'></div>";
                             echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Descripción</label>";
                           echo "<input class='form-control' value='".$columna['description']."' type='text' name='description'>";
-                        echo "</div>"; 
-                    
+                        echo "</div>";
+
                         echo "<div class='col-md-12 mb-20'>";
                           echo "<label>Fecha Nacimiento</label>";
                           echo "<div class='input-group'>";
@@ -179,7 +179,7 @@
                           echo "</div>";
                         echo "</div>";
 
-                      
+
 
                         echo "<div class='col-md-12'>";
                           echo "<button class='btn btn-primary' ><i class='fa fa-fw fa-lg fa-check-circle'></i> Guardar cambios</button>";
@@ -194,9 +194,9 @@
             </div>
           </div>
         </div>
-       
+
       </div>
-      
+
     </div>
     <style type="text/css">
       .toggle-flip input[type="checkbox"] + .flip-indecator{
@@ -204,7 +204,7 @@
       }
     </style>
     <script>
-      var btnCust = ''; 
+      var btnCust = '';
       var rutaFoto = $("#rutaFoto").val();
       $("#avatar-1").fileinput({
           overwriteInitial: true,
@@ -224,7 +224,7 @@
           allowedFileExtensions: ["jpg", "png", "gif"]
       });
 
-     
+
     </script>
 
     <!-- Javascripts-->
@@ -242,7 +242,7 @@
         todayHighlight: true
       });
 
-      
+
 
     </script>
 
