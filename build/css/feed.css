@@ -18,6 +18,7 @@
 
 .imagenaqui{
   margin-bottom: 1.5em;
+
 }
 
 
@@ -74,10 +75,10 @@
 
 /* Afecciones COSAS ENTRO DE OTRAS NESTING!!!!*/
 body{
-    background-image: url("../images/bg.png");
+    background-image: url("../images/bg3.png");
     background-repeat: repeat;
     background-attachment: fixed;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
 }
 main{
   align-items: center;
@@ -86,8 +87,8 @@ text-align: justify;
 }
 
 aside {
-  font-weight: 600;
-  height: 100%;
+  font-weight: 500;
+  height: auto;
   color: white;
   padding: 15px;
   padding-top: 25px;
@@ -102,8 +103,9 @@ header a{
 }
 
 aside img{
-  width: 9em;
-  height: 9em;n
+  width: 11em;
+  height:11em;
+  border-radius: 50%;
 }
 aside a{
   text-decoration: none;
