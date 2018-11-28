@@ -1,28 +1,29 @@
 <?php
 	session_start();
-
+	
 
 	if (isset($_POST['id_usuario'])) {
-
+		
 		include '../config.php';
-		$id_usuario = $_POST['id_usuario'];
+		$id_usuario = $_POST['id_usuario'];	
 		$categoria = $_POST['categoria'];
-
+       
 		$publicar = 0;
-        $idcat = 2;
+        $idcat = 2; 
 		if ($categoria != "otro"){
 			list($id_categoria, $nombre_categoria) = explode('-', $categoria);
          /*   $idcat = $columna['id_category']; */
 		}
 
-
-
+        
+		
 		$imagen1=$_FILES["imagen1"]["name"];
 	    $ruta1=$_FILES["imagen1"]["tmp_name"];
 	    $destino1="../build/images/Users/galeria/".$imagen1;
 	    echo $imagen1;
 	    copy($ruta1,$destino1);
     	$sql_imagen1 = "INSERT INTO gallery (id_user,Id, uniqueurl) VALUES ('$id_usuario','$id_categoria','$destino1')";
+        echo $idcat;
     	$resultado1 = mysqli_query($conexion, $sql_imagen1) or die("Error en consulta1");
 
 	    $imagen2=$_FILES["imagen2"]["name"];
@@ -55,8 +56,8 @@
 		header("Location: ../account/profile.php");
 
 	}
-	else{
-		header("Location: ../index.php");
-	}
+	else{		
+		header("Location: ../index.php"); 	
+	}	
 
 ?>
