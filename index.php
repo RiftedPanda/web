@@ -14,7 +14,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="login/images/icons/favicon.ico"/>
+	<link rel="shortcut icon" type="image/png" href="favicon1.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -51,6 +51,9 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('build/images/login/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+        <div class="image">
+          <a href="index.php"> <img src="build/images/login/login_logo.png" width="400px" alt=""> </a>
+        </div>
 				<form class="login100-form validate-form" action="account/checklogin.php" method="post">
 					<span class="login100-form-title p-b-49">
 						Iniciar Sesión
@@ -80,7 +83,7 @@
 
 					<div class="text-right p-t-8 p-b-31">
 						<a href="#">
-							Olvido su contraseña?
+							¿Olvido su contraseña?
 						</a>
 					</div>
 					<input type="text" name="login" hidden>
@@ -88,14 +91,14 @@
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
-								Iniciar sesion
+								Iniciar sesión
 							</button>
 						</div>
 					</div>
 
 					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
-							O inicia usando
+							O inicia usando:
 						</span>
 					</div>
 

@@ -1,5 +1,5 @@
 <!-- Navbar-->
-<header class="main-header hidden-print"><a class="logo" href="../index.php"><img src="/Upjobs/images/"   height="30" width="100" style="margin-bottom: 12px;"></a>
+<header class="main-header hidden-print"><a class="logo" href="../index.php"><img src="../build/images/logo-config.png"   height="30" width="100" style="margin-bottom: 12px;"></a>
   <nav class="navbar navbar-static-top">
     <!-- Sidebar toggle button-->
     <a class="sidebar-toggle" href="#" data-toggle="offcanvas"></a>

@@ -6,7 +6,7 @@
     echo "";
   }
   else{
-    header("Location: index.php"); 
+    header("Location: index.php");
   }
 ?>
 
@@ -16,6 +16,8 @@
  <head>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="shortcut icon" type="image/png" href="favicon1.png"/>
+<!--===============================================================================================-->
  <link rel="stylesheet" href="build/css/bootstrap.min.css">
  <link rel="stylesheet" href="build/css/feed.css">
  <link rel="stylesheet" href="build/css/searchstyle.css">
@@ -38,8 +40,8 @@
 <div id="Content" class="container-fluid">
   <div class="row">
     <aside class="profile rounded col-12 col-xl-3">
-          <div>
-            <!-- <?php
+<div class="">
+             <?php
               include 'config.php';
               $usuario = $_SESSION['usuario'];
               $sql = "SELECT * FROM users WHERE (username = '$usuario') ";
@@ -47,11 +49,11 @@
 
               while ($columna = mysqli_fetch_array($resultado))
               {
-                echo "<br><img  src='web-master/".$columna['foto']." '></div><br>";
+                echo "<a href='profile.php'><img class='imagenaqui' src='web-master/".$columna['foto']." '></a>";
               }
                 /*<img id="profilepic" class="mx-auto mt-5 d-block" src="<?php echo $foto; ?>" alt="">*/
-              ?>-->
-            <a href="#"><img class="imagenaqui"  src="build/images/profile.png" alt=""></a>
+              ?>
+
             <h3>¡Bienvendid@!</h3>
               <a href="profile.php"><h1><?= $_SESSION['fullname']?></h1></a>
             <ul class="three_top">
@@ -122,7 +124,7 @@
             <div class="row">
                 <div>
                     <div class="title">
-                        <h5>Latest Articles</h5>
+                        <h3>Últimas noticias</h3>
                     </div>
 
                     <!-- Single Blog Post -->
@@ -230,13 +232,13 @@
           <!-- Just an image -->
             <div class="mx-1 d-inline">
               <a  href="account/profile.php">
-                <img  src="build/images/feed/icon1.png" width="45" height="45" alt="">
+                <img  src="build/images/feed/editar.png" width="65" height="45" alt="">
               </a>
             </div>
           <!-- Just an image -->
             <div class="mx-1 d-inline">
               <a  href="account/logout.php">
-                <img  src="build/images/feed/icon1.png" width="45" height="45" alt="">
+                <img  src="build/images/feed/out.png" width="45" height="45" alt="">
               </a>
             </div>
 
