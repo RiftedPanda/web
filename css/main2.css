@@ -13582,7 +13582,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .main-header .navbar {
-  background: linear-gradient(45deg, #66b3ff, #66b3ff);
+  background: linear-gradient(45deg, #66b3ff, #ff00bf);
 }
 
 .main-header .navbar .top-nav > li > a {
@@ -13619,7 +13619,7 @@ be a descendant of the grid when it is being dragged.
 }
 
 .main-header .logo {
-  background-color: #a8d5f4;
+  
   color: #FFF;
   border-bottom: 0 solid transparent;
 }
