@@ -53,7 +53,7 @@
 		<div class="container-login100" style="background-image: url('../build/images/login/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
         <div class="image">
-          <a href="index.php"> <img src="../build/images/login/login_logo.png" width="400px" alt=""> </a>
+          <a href="../index.php"> <img src="../build/images/login/login_logo.png" width="400px" alt=""> </a>
         </div>
 				<form class="login100-form validate-form" action="checksignup.php" method="post">
 					<span class="login100-form-title p-b-49">
