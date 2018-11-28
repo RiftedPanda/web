@@ -152,13 +152,13 @@
       </div>
         <div class="row justify-content-center">
           <div class="imagen-galeria col-12 col-xl m-4">
-            <img id="profilepic" class="mx-auto mt-5 d-block" src="build/images/Users/galeria/bruja.jpg" alt="">
+            <img id="profilepic" class="mx-auto mt-5 d-block" src="sfw/bears.png" alt="">
           </div>
           <div class="imagen-galeria col-12 col-xl m-4">
-            <img id="profilepic" class="mx-auto mt-5 d-block" src="build/images/Users/galeria/waffle.png" alt="">
+            <img id="profilepic" class="mx-auto mt-5 d-block" src="sfw/smash.jpg" alt="">
           </div>
           <div class="imagen-galeria col-12 col-xl m-4">
-            <img id="profilepic" class="mx-auto mt-5 d-block" src="build/images/Users/galeria/Ojo.jpg" alt="">
+            <img id="profilepic" class="mx-auto mt-5 d-block" src="sfw/colors.jpg" alt="">
           </div>
         </div>
 
