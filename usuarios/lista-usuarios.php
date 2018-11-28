@@ -84,7 +84,7 @@
                           echo "<td>".$usuario['username']."</td>";
                           echo "<td>".$usuario['fullname']."</td>";
                           echo "<td>".$usuario['email']."</td>";
-                          echo "<td>".$usuario['Facebook']."</td>";
+                          echo "<td>".$usuario['facebook']."</td>";
                           echo "<td>".$activo."</td>";
                           echo "<td><a class='btn btn-".$color."' href='editar-usuario.php?id=".$id_usuario."&ac=".$usuario['activo']."'><i class='fa fa fa-power-off'></i></a></td>";
                         echo "</tr>";
