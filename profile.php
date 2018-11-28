@@ -111,14 +111,17 @@
 
     <div class="container mt-3">
       <div class="textogaleria text-center">
-        <h1>TITULO PARA MI TRABAJO</h1>
+        <h1>Mi Galeria</h1>
       </div>
         <div class="row justify-content-center">
           <div class="imagen-galeria col-12 col-xl m-4">
+            <img id="profilepic" class="mx-auto mt-5 d-block" src="build/images/Users/galeria/bruja.jpg" alt="">
           </div>
           <div class="imagen-galeria col-12 col-xl m-4">
+            <img id="profilepic" class="mx-auto mt-5 d-block" src="build/images/Users/galeria/waffle.png" alt="">
           </div>
           <div class="imagen-galeria col-12 col-xl m-4">
+            <img id="profilepic" class="mx-auto mt-5 d-block" src="build/images/Users/galeria/Ojo.jpg" alt="">
           </div>
         </div>
 

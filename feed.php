@@ -134,12 +134,12 @@
                         <!-- Post Content -->
                         <div class="post-content">
                             <a href="#" class="headline">
-                                <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
+                                <h5>Me estoy sintiendo Van Gogh con esta.</h5>
                             </a>
-                            <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
+                            <p>Sera que era simpemente un loco malentendido y que el mundo era el verdaderamente insano?...</p>
                             <!-- Post Meta -->
                             <div class="post-meta">
-                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
+                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Nov 25, 2018 at 9:48 am</a></p>
                             </div>
                         </div>
                     </div>
@@ -153,12 +153,12 @@
                         <!-- Post Content -->
                         <div class="post-content">
                             <a href="#" class="headline">
-                                <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
+                                <h5>Playas Hermosas:3</h5>
                             </a>
-                            <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
+                            <p>Viaje con mi familia a Miami y me inspire para hacer esta pieza...</p>
                             <!-- Post Meta -->
                             <div class="post-meta">
-                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
+                                <p><a href="#" class="post-author">Luke Thompson</a> on <a href="#" class="post-date">Nov 27, 2018 at 3:48 am</a></p>
                             </div>
                         </div>
                     </div>
@@ -172,12 +172,12 @@
                         <!-- Post Content -->
                         <div class="post-content">
                             <a href="#" class="headline">
-                                <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
+                                <h5>La ciudad nunca duerme...</h5>
                             </a>
-                            <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
+                            <p>Una metropolis urbana extensa que parece tener vida y aliento propio...</p>
                             <!-- Post Meta -->
                             <div class="post-meta">
-                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
+                                <p><a href="#" class="post-author">Cristina Malloy</a> on <a href="#" class="post-date">Nov 26, 2018 at 3:48 pm</a></p>
                             </div>
                         </div>
                     </div>
@@ -191,12 +191,12 @@
                         <!-- Post Content -->
                         <div class="post-content">
                             <a href="#" class="headline">
-                                <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
+                                <h5>Sesion de fotografias</h5>
                             </a>
-                            <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
+                            <p>Hermosas fotografias de Katherine Pines.XOXO...</p>
                             <!-- Post Meta -->
                             <div class="post-meta">
-                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
+                                <p><a href="#" class="post-author">Mathew Anderson</a> on <a href="#" class="post-date">Nov 27, 2018 at 9:48 am</a></p>
                             </div>
                         </div>
                     </div>
